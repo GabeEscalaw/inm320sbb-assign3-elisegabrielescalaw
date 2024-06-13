@@ -8,15 +8,19 @@ $font-weight-big: 900;
 // note: font weight not changing
 
 // mixins
-@mixin transition-all($delay: 0.2, $ease-type: ease-out) {
+@mixin transition-all($delay: 0.2s, $ease-type: ease-out) {
     transition: all $delay $ease-type;
+}
+
+@mixin font-size($size: 12px) {
+    font-size: $size;
 }
 
 /* This is the original example. You can take all css styles from here. */
 
 body {
     font-family: Quando;
-    font-size: 15px;
+    @include font-size($size: 15px);
     color: #787878;
 }
 img {
@@ -51,22 +55,22 @@ h6 {
     color: $black;
 }
 h1 {
-    font-size: 37px;
+    @include font-size($size: 37px);
 }
 h2 {
-    font-size: 31px;
+    @include font-size($size: 31px);
 }
 h3 {
-    font-size: 26px;
+    @include font-size($size: 26px);;
 }
 h4 {
-    font-size: 21px;
+    @include font-size($size: 21px);
 }
 h5 {
-    font-size: 18px;
+    @include font-size($size: 18px);
 }
 h6 {
-    font-size: 15px;
+    @include font-size($size: 15px);
 }
 
 
@@ -108,13 +112,13 @@ article {
     a {
         color: $navy;
         text-transform: uppercase;
-        font-size: 26px;
+        @include font-size($size: 26px);
         font-weight: $font-weight-big;
         margin-top: 15px;
         margin-bottom: 15px;
         line-height: 1.3em;
         // mixin application 1
-        @include transition-all($delay: 0.2, $ease-type: ease);
+        @include transition-all($delay: 0.3s, $ease-type: ease);
     }
     a:hover {
         color: #35c4ce;
@@ -147,7 +151,7 @@ footer {
 }
 .footer-social-links a {
     margin: 0 10px;
-    font-size: 16px;
+    @include font-size($size: 16px);
     letter-spacing: 1px;
     text-transform: uppercase;
 }
@@ -156,7 +160,7 @@ footer {
 }
 #footer-copyright {
     padding: $gen-margin 0;
-    font-size: 12px;
+    @include font-size;
     color: $light-grey;
 }
 
@@ -189,7 +193,7 @@ footer {
             color: $navy;
             letter-spacing: 1px;
             text-transform: uppercase;
-            font-size: 12px;
+            @include font-size;
             font-weight: $font-weight-big;
         }
         nav a:hover {
@@ -198,7 +202,7 @@ footer {
         nav li.menu-item-has-children > a::after {
             margin-left: 7px;
             font-family: 'FontAwesome';
-            font-size: 13px;
+            @include font-size($size: 13px);
             color: $navy;
             content: '\f078';
         }
@@ -277,7 +281,7 @@ footer {
         }
         a span {
             display: inline;
-            font-size: 11px;
+            @include font-size($size: 11px);
         }
     }
 }
