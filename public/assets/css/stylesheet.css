@@ -74,7 +74,6 @@ h6 {
 header {
   font-family: "Josefin Sans", sans-serif;
 }
-
 header nav ul {
   display: none;
 }
@@ -98,7 +97,6 @@ article {
 .post-title {
   margin-top: 0;
 }
-
 .post-title a {
   color: #324360;
   text-transform: uppercase;
@@ -107,9 +105,8 @@ article {
   margin-top: 15px;
   margin-bottom: 15px;
   line-height: 1.3em;
-  transition: all 0.3s ease;
+  transition: all 0.2 ease;
 }
-
 .post-title a:hover {
   color: #35c4ce;
 }
@@ -163,6 +160,9 @@ footer {
   .container {
     width: 90%;
   }
+  header {
+    /* sub nav */
+  }
   header nav {
     max-width: 1170px;
     margin: 0 auto;
@@ -197,10 +197,6 @@ footer {
     color: #324360;
     content: "\f078";
   }
-  .current-menu-item a {
-    border-bottom: 2px solid #324360;
-  }
-  /* sub nav */
   header nav ul ul {
     visibility: hidden;
     opacity: 0;
@@ -209,7 +205,7 @@ footer {
     z-index: 9999;
     left: 0;
     background: #f0f0f0;
-    transition: all 0.2s ease-out;
+    transition: all 0.2 ease-out;
   }
   header nav ul li:hover ul {
     visibility: visible;
@@ -232,6 +228,9 @@ footer {
   header nav ul ul a:hover {
     background: #ffffff;
     color: #000;
+  }
+  .current-menu-item a {
+    border-bottom: 2px solid #324360;
   }
   /* posts */
   article {
